@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+<script src="/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/jquery-3.6.0.min.js"></script>
+    <title>Inicio</title>
+    
+    
+</head>
+<body>
+    <div class="container">
+    <div id="contenido">
+        <header>
+            <h2 id="titulop">
+                Instituto Tecnológico de la Sierra Norte de Puebla
+            </h2>
+            <br />
+            <h2 id="titulop">
+                Sistema de Registro de Proyectos
+            </h2>
+        </header>
+        <br>
+        <ul class="navbar-nav ml-auto">
+                	<li class="nav-item">
+                		<a class="nav-link" href="/usuario/salir"><i class="fas fa-door-open"></i>Cerrar sesion</a>
+                	</li>
+                </ul>
+
+        <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+
+            <ul class="menu">
+                <li>
+                    <a th:href="@{/proyecto/agregar}">Registrar</a>
+                </li>
+                <li>
+                    <a th:href="@{/proyecto/listar}">Consultar</a>
+                </li>
+            </ul>
+
+        </nav>
+        <br><br>
+        <section>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla maxime quasi ducimus a facere modi ipsa obcaecati repellendus. Repellat, recusandae impedit culpa maiores nisi nobis quidem ex ducimus nihil cupiditate.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae aut maiores officiis et doloribus quia. Necessitatibus maiores veniam aliquam voluptate, quis animi? Maiores nemo minus eos sed vel. Illo, praesentium?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, velit nobis blanditiis ullam in perspiciatis aliquid! Fugit atque laudantium recusandae doloremque, eius impedit sapiente, neque accusamus asperiores soluta culpa doloribus!
+            </p>
+
+        </section>
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <footer>
+                    <h6>Sin derechos reservados</h6>
+                    <h7>Desarrolldo por: Jose Alberto Hernandez Luna, Hissam Herrera Gomez y Luis Isidro Romero Lira para la asignatura de Desarrollo Wev Avanzado</h7>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

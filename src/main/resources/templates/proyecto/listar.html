@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+<script src="/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/jquery-3.6.0.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+<header>
+    <h1 id="titulop">
+        Consulta de Proyectos
+    </h1>
+</header>
+<br>
+<ul class="navbar-nav ml-auto">
+                	<li class="nav-item">
+                		<a class="nav-link" href="/usuario/salir"><i class="fas fa-door-open"></i>Cerrar sesion</a>
+                	</li>
+                </ul>
+
+
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" th:href="@{/proyecto/index}">Inicio</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <div id="contenido">
+            <table class="table table-striped">
+                <thead>
+                	<tr>
+                		
+                		<th>NOMBRE</th>
+                		<th>RESPONSABLE</th>
+                		<th>INTEGRANTES</th>
+                		<th>AREA</th>
+                		<th>DESCRIPCION</th>
+                		
+                		<th>ACCIONES</th>
+                	</tr>
+                </thead>
+                	<tbody>
+                		<tr th:each="proyecto:${proyecto}">
+                			
+                			<td th:text="${proyecto.nombreproyecto}"></td>
+                			<td th:text="${proyecto.responsable}"></td>
+                			<td th:text="${proyecto.nombreintegrantes}"></td>
+                			<td th:text="${proyecto.areaproyecto}"></td>
+                			<td th:text="${proyecto.descripcion}"></td>
+                			
+                			<td>
+                			<a th:href="@{/editar/}+${proyecto.id}" class="btn btn-warning">Editar</a>
+                			</td>
+                		</tr>
+                	</tbody>
+
+            </table>
+            </div>
+        </div>
+    <div class="col-1"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+
+/*Media query para imprimir*/
+@media print{
+  body{
+      background-color: rgb(255, 255, 255);
+  }
+
+   nav, button{
+      display: none;
+  }
+
+  #titulopi{
+      display: block;
+  }
+
+  h1, p{
+      font-size: 1.2rem;
+  }
+
+  #Registrar{
+      display: none;
+  }
+
+  #Descargar{
+      display: none;
+  }
+
+  #contenido{
+      background-color: rgb(255, 255, 255);
+  }
+  
+}

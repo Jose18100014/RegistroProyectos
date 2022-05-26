@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+<script src="/scripts/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/jquery-3.6.0.min.js"></script>
+    
+    
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h1 id="titulop">
+            Instituto Tecnológico de la Sierra Norte de Puebla
+        </h1>
+    </header>
+    <br><br>
+    <div id="contenido">
+    <h1>Crear cuenta</h1>
+    
+    <div class="row">
+				<div class="col-3"></div>
+				<div class="col-5">
+					<div th:if="*{error != null}" 
+						class="alert alert-warning alert-dismissible fade show"
+						role="alert">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<h4 th:text=*{error}></h4>
+					</div>
+				
+				<form action="#" th:action="@{agregar}" th:object="${usuario}" method="post" class = "was-validated">
+                    <fieldset>
+                        <legend>Registro de Usuarios</legend>
+
+                        <label for="Alias" class="form-label">Alias:</label>
+                        <input type="text" required="required" th:field="*{alias}" class="form-control" placeholder="Jose123">
+                        <br />
+
+                        <label for="Nombre" class="form-label">Numero de Control:</label>
+                        <input type="text" required="required" th:field="*{numerocontrol}" name="numerocontrol" class="form-control" placeholder="18100014">
+                        <br />
+                        
+                        <label for="Correo" class="form-label">Nombre Completo</label>
+                        <input type="text" required="required" th:value="*{nombrecompleto}" name="nombrecompleto" class="form-control" placeholder="Jose Alberto">
+                        <br />
+                        
+                        <label for="Correo" class="form-label">Apellidos</label>
+                        <input type="text" required="required" th:value="*{apellidos}" name="apellidos" class="form-control" placeholder="Hernandez Luna">
+                        <br />
+                        
+                        <label for="inputPassword5" class="form-label">Password</label>
+                        <input type="password" required="required" name="clave" class="form-control" aria-describedby="passwordHelpBlock" placeholder="*******">
+                        <br> <br>
+
+                        <p style="text-align: center;">
+                            <input type="submit" value="Registrar" class="btn btn-success" />
+                            <input type="reset" value="Limpiar" />
+                        </p>
+                    </fieldset>
+                </form>
+				
+				<div th:if="*{error !=null}" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4 th:text=*{error}></h4>
+            </div>
+					
+					
+					
+				
+				
+				
+				</div>
+				<div class="col-4"></div>
+
+			</div>
+    
+    </div>
+    </div>
+</body>
+</html>
